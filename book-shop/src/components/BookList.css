@@ -1,0 +1,84 @@
+.book-list {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 自适应布局 */
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .book-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* 保证按钮对齐底部 */
+    min-height: 30px;  /* 设置最小高度，避免不同高度 */
+    height: 100%; /* 确保卡片拉伸到最大 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;  /* 让按钮和文本居中 */
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book-card h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 8px; /* 减小书名和作者之间的间距 */
+    flex-grow: 1;  /* 让标题部分可扩展占据剩余空间 */
+    overflow: hidden; /* 防止标题溢出 */
+    text-overflow: ellipsis; /* 如果标题过长，显示省略号 */
+  }
+  
+  .book-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px; /* 在这里增加上方间距，减少下方间距 */
+    margin-bottom: 15px; /* 增加作者和价格之间的间距 */
+  }
+  
+  .view-details {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: auto; /* 确保按钮移动到卡片底部 */
+    align-self: center;  /* 确保按钮水平居中 */
+  }
+  
+  .view-details:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .books-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

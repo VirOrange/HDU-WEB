@@ -1,0 +1,18 @@
+e-book-store/
+├── public/
+│   └── index.html
+├── src/
+│   ├── App.js
+│   ├── components/
+│   │   ├── BookList.js
+│   │   ├── BookDetail.js
+│   │   └── Cart.js
+│   ├── pages/
+│   │   ├── Home.js
+│   │   ├── BookDetailPage.js
+│   │   └── CartPage.js
+│   ├── store/
+│   │   └── useStore.js
+│   ├── db.json
+│   └── index.js
+└── package.json
